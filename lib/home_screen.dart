@@ -27,10 +27,6 @@ class _HomeScreenState extends State<HomeScreen> {
            _mapController = controller;
 
            },
-        trafficEnabled: true,
-        zoomControlsEnabled: true,
-        myLocationButtonEnabled: true,
-        myLocationEnabled: true,
 
         onTap: (LatLng LatLng){
             print('You Tapped on $LatLng');
@@ -41,8 +37,66 @@ class _HomeScreenState extends State<HomeScreen> {
             print('You long pressed on $LatLng');
         },
 
+        trafficEnabled: true,
+        zoomControlsEnabled: true,
+        myLocationButtonEnabled: true,
+        myLocationEnabled: true,
+        compassEnabled: true,
+        markers: <Marker>{
+            Marker(
+              markerId: MarkerId('My home'),
+              position: LatLng(25.747399180983482, 89.46055303058475),
+              infoWindow: InfoWindow(
+                title: "My Home",
+                  onTap:(){
 
-    ),
+                }
+              ),
+                onTap:(){
+
+                //do whatever you want
+
+              },
+
+              icon: BitmapDescriptor.defaultMarkerWithHue(BitmapDescriptor.hueRed),
+              
+
+
+            ),
+
+          Marker(
+            markerId: MarkerId('My Institute'),
+            position: LatLng(26.039013545325922, 88.44284992665052),
+            infoWindow: InfoWindow(
+                title: "My Institute",
+                onTap:(){
+
+                }
+            ),
+            onTap:(){
+
+              //do whatever you want
+
+            },
+
+            icon: BitmapDescriptor.defaultMarkerWithHue(BitmapDescriptor.hueMagenta),
+
+            draggable: true,
+
+
+            onDragStart: (LatLng startLatLng){
+              print('Start latlng $startLatLng');
+            },
+            onDragEnd: (LatLng startLatLng){
+
+              print('Stop latlong $startLatLng');
+            }
+
+          ),
+
+        } ,
+
+      ),
     );
   }
 }
