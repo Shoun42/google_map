@@ -132,7 +132,6 @@ class _HomeScreenState extends State<HomeScreen> {
         LatLng(23.82647018811372, 91.22717499732971),
         LatLng(23.400835029616665, 91.19051489979029),
         LatLng(23.227623090705688, 90.59213988482952),
-
       ],
 
       strokeWidth:2,
