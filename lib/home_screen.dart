@@ -55,6 +55,24 @@ class _HomeScreenState extends State<HomeScreen> {
         onDragEnd: (LatLng startLatLng) {
           print('Stop latlong $startLatLng');
         }),
+//Ata delete hobe
+
+    Marker(
+        markerId: MarkerId('Friend House'),
+        position: LatLng(25.636718865301358, 88.65111105144024),
+        infoWindow: InfoWindow(title: "Friend House", onTap: () {}),
+        onTap: () {
+          //do whatever you want
+        },
+        icon:
+        BitmapDescriptor.defaultMarkerWithHue(BitmapDescriptor.hueMagenta),
+        draggable: true,
+        onDragStart: (LatLng startLatLng) {
+          print('Start latlng $startLatLng');
+        },
+        onDragEnd: (LatLng startLatLng) {
+          print('Stop latlong $startLatLng');
+        }),
 
     Marker(
         markerId: MarkerId('Friend House'),
@@ -118,8 +136,6 @@ class _HomeScreenState extends State<HomeScreen> {
       strokeWidth: 2,
     ),
   };
-
-
   /* পলিগণের জন্য */
 
   final Set<Polygon> _polygon = <Polygon>{
